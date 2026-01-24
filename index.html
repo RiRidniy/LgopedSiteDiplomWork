@@ -1,13 +1,105 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="styles/css.css">
+    <title>Уроки логопеда</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="./Font/GraphikLCG/stylesheet.css">
 </head>
 <body>
-    <div class="pb"></div>
-    <img src="./image/Rectangle 90.png" alt="png">
+
+<header class="header">
+     <nav class="nav">
+
+        <a href="#">Главная</a>
+        <a href="#">Обо мне</a>
+        <a href="#">Услуги</a>
+        <a href="#">Игры и задания</a>
+        <a href="#">Контакты</a>
+
+        <!-- Выпадающее меню -->
+        <div class="dropdown">
+            <button class="dropbtn">
+                Дефекты речи ▾
+            </button>
+            <div class="dropdown-content">
+                <a href="#">Дислалия</a>
+                <a href="#">Дизартрия</a>
+                <a href="#">Дисграфия</a>
+                <a href="#">Алалия</a>
+                <a href="#">Афазия</a>
+                <a href="#">Заикание</a>
+                <a href="#">ОНР</a>
+            </div>
+        </div>
+
+        <!-- Кнопка с глазом -->
+        <button class="eye-btn" title="Версия для слабовидящих">
+            
+        </button>
+    </nav>
+</header>
+
+<main>
+    <!-- HERO -->
+    <section class="hero">
+        <img src="./img/Дизайн фишка.png" alt="png" class="wave">
+
+        <div class="hero-content">
+            <h1>УРОКИ ЛОГОПЕДА</h1>
+            <p>Персональный сайт логопеда-дефектолога<br>Нуримановой Г.Т.</p>
+            <button class="btn">Записаться на занятие</button>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about">
+        <div class="text">
+            <p>
+                Текст о специалисте,
+                подходе к занятиям, опыте работы,
+                индивидуальных программах и результатах.Текст о специалисте,
+                подходе к занятиям, опыте работы,
+                индивидуальных программах и результатах.Текст о специалисте,
+                подходе к занятиям, опыте работы,
+                индивидуальных программах и результатах.
+                
+            </p>
+        </div>
+        <div class="photo-placeholder"></div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="features">
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="gallery">
+        <h1 style="margin-bottom:50px;text-align: center;font-family: 'Graphik LCG';font-size: 50px; font-style: normal;">НАША ГАЛЕРЕЯ</h1>
+        <div class="grid">
+            <div class="img"></div>
+            <div class="img"></div>
+            <div class="img"></div>
+            <div class="img"></div>
+            <div class="img"></div>
+            <div class="img"></div>
+        </div>
+    </section>
+
+    <section class="footer">
+      
+    </section>
+</main>
+
+<!-- Кнопка вверх -->
+<button id="toTop">
+    <img src="./img/стрелка.png" alt="Наверх">
+</button>
+
+<script src="js/main.js"></script>
 </body>
 </html>

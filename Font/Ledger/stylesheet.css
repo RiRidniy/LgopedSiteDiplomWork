@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Ledger';
+    src: url('Ledger-Regular.eot');
+    src: local('Ledger'), local('Ledger-Regular'),
+        url('Ledger-Regular.eot?#iefix') format('embedded-opentype'),
+        url('Ledger-Regular.woff2') format('woff2'),
+        url('Ledger-Regular.woff') format('woff'),
+        url('Ledger-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+

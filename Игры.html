@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Уроки логопеда</title>
+    <link rel="stylesheet" href="css/Игры.css">
+    <link rel="stylesheet" href="./Font/GraphikLCG/stylesheet.css">
+    <link rel="stylesheet" href="./Font/Ledger/stylesheet.css">
+</head>
+<body>
+
+<header class="header">
+     <nav class="nav">
+
+        <a href="./index.html">Главная</a>
+        <a href="./about.html">Обо мне</a>
+        <a href="./Услуги.html">Услуги</a>
+        <a href="./Игры.html">Игры и задания</a>
+        <a href="./Контакты.html">Контакты</a>
+
+        <!-- Выпадающее меню -->
+        <div class="dropdown">
+            <button class="dropbtn">
+                Дефекты речи ▾
+            </button>
+            <div class="dropdown-content">
+                <a href="#">Дислалия</a>
+                <a href="#">Дизартрия</a>
+                <a href="#">Дисграфия</a>
+                <a href="#">Алалия</a>
+                <a href="#">Афазия</a>
+                <a href="#">Заикание</a>
+                <a href="#">ОНР</a>
+            </div>
+        </div>
+
+        <!-- Кнопка с глазом -->
+        <button class="eye-btn" title="Версия для слабовидящих">
+            
+        </button>
+    </nav>
+</header>
+
+<section class="shapka">
+</section>
+
+<!-- ИГРЫ -->
+<section class="games">
+    <img src="img/lines.svg" class="lines-top" alt="">
+    <h2 class="zagolov2">ИГРЫ И РАЗВИВАШКИ</h2>
+
+    <div class="games-grid">
+        <!-- Карточка -->
+        <div class="game-card" data-modal="modal1">Игра 1</div>
+        <div class="game-card" data-modal="modal2">Игра 2</div>
+        <div class="game-card" data-modal="modal3">Игра 3</div>
+        <div class="game-card" data-modal="modal4">Игра 4</div>
+        <div class="game-card" data-modal="modal5">Игра 5</div>
+        <div class="game-card" data-modal="modal6">Игра 6</div>
+
+        <!-- Кнопка перехода -->
+        <a href="catalog.html" class="game-card catalog-card">
+            перейти в каталог игр →
+        </a>
+    </div>
+</section>
+
+<!-- БАННЕРЫ -->
+<section class="banners">
+    <div class="banner">
+        <a href="page1.html" class="banner-btn">Перейти</a>
+    </div>
+    <div class="banner">
+        <a href="page2.html" class="banner-btn">Перейти</a>
+    </div>
+    <div class="banner">
+        <a href="page3.html" class="banner-btn">Перейти</a>
+    </div>
+</section>
+
+<!-- МОДАЛЬНЫЕ ОКНА -->
+<div class="modal" id="modal1">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3>Игра 1</h3>
+        <p>Описание первой игры, правила, цель.</p>
+    </div>
+</div>
+
+<div class="modal" id="modal2">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3>Игра 2</h3>
+        <p>Описание второй игры.</p>
+    </div>
+</div>
+
+<div class="modal" id="modal3">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3>Игра 3</h3>
+        <p>Описание третьей игры.</p>
+    </div>
+</div>
+
+<!-- добавляй модальные окна по необходимости -->
+<section class="footer">
+      
+    </section>
+<!-- Кнопка вверх -->
+<button id="toTop">
+    <img src="./img/стрелка.png" alt="Наверх">
+</button>
+
+<script src="js/main.js"></script>
+</body>
+</html>

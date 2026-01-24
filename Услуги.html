@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Уроки логопеда</title>
+    <link rel="stylesheet" href="css/услуги.css">
+    <link rel="stylesheet" href="./Font/GraphikLCG/stylesheet.css">
+    <link rel="stylesheet" href="./Font/Ledger/stylesheet.css">
+</head>
+<body>
+
+<header class="header">
+     <nav class="nav">
+
+        <a href="./index.html">Главная</a>
+        <a href="./about.html">Обо мне</a>
+        <a href="./Услуги.html">Услуги</a>
+        <a href="./Игры.html">Игры и задания</a>
+        <a href="./Контакты.html">Контакты</a>
+
+        <!-- Выпадающее меню -->
+        <div class="dropdown">
+            <button class="dropbtn">
+                Дефекты речи ▾
+            </button>
+            <div class="dropdown-content">
+                <a href="#">Дислалия</a>
+                <a href="#">Дизартрия</a>
+                <a href="#">Дисграфия</a>
+                <a href="#">Алалия</a>
+                <a href="#">Афазия</a>
+                <a href="#">Заикание</a>
+                <a href="#">ОНР</a>
+            </div>
+        </div>
+
+        <!-- Кнопка с глазом -->
+        <button class="eye-btn" title="Версия для слабовидящих">
+            
+        </button>
+    </nav>
+</header>
+
+<section class="shapka">
+</section>
+
+<section class="txt"><h1>УСЛУГИ</h1></section>
+
+<!-- УСЛУГИ -->
+<section class="services">
+    <img src="img/lines.svg" class="lines-top" alt="">
+
+    <div class="services-grid">
+        <!-- Карточки услуг (добавляй / удаляй сколько нужно) -->
+        <div class="service-card">Индивидуальные занятия</div>
+        <div class="service-card">Онлайн-консультация</div>
+        <div class="service-card">Диагностика речи</div>
+        <div class="service-card">Коррекция звукопроизношения</div>
+    </div>
+
+    <img src="img/waves-bottom.svg" class="waves-bottom" alt="">
+</section>
+
+<!-- ЗАПИСЬ НА ПРИЕМ -->
+<section class="appointment">
+    <h2>ЗАПИСАТЬСЯ НА ПРИЕМ</h2>
+
+    <form class="appointment-form">
+        <select required>
+            <option value="">Выберите услугу...</option>
+            <option>Индивидуальные занятия</option>
+            <option>Онлайн-консультация</option>
+            <option>Диагностика речи</option>
+            <option>Коррекция звукопроизношения</option>
+        </select>
+
+        <input type="text" placeholder="Имя родителя" required>
+        <input type="tel" placeholder="Номер телефона..." required>
+        <input type="email" placeholder="Почта...">
+        <input type="text" placeholder="Имя ребенка...">
+        <textarea placeholder="Опишите проблему подробнее..."></textarea>
+
+        <button type="submit">Отправить</button>
+    </form>
+</section>
+
+<!-- ОТЗЫВ -->
+<section class="feedback">
+    <img src="img/lines.svg" class="lines-feedback" alt="">
+    <p>
+        УЖЕ БЫЛИ У НАС? <br>
+        РАССКАЖИТЕ О СВОЕМ ОПЫТЕ, ОСТАВИВ
+        <a href="reviews.html">ОТЗЫВ</a>
+    </p>
+</section>
+
+<section class="footer">
+      
+    </section>
+    
+<!-- Кнопка вверх -->
+<button id="toTop">
+    <img src="./img/стрелка.png" alt="Наверх">
+</button>
+
+<script src="js/main.js"></script>
+</body>
+</html>

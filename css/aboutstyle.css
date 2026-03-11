@@ -103,7 +103,7 @@ body {
     background-position: center;
     width: 100%;
     min-height: 600px;
-    padding: 20px 20px 100px 20px;
+    padding: 30px 20px 100px 20px;
     position: relative;
 }
 
@@ -141,7 +141,7 @@ body {
 
 /* ========== БЛОК "ОБО МНЕ" ========== */
 .about {
-    padding: 80px 20px;
+    padding: 50px 20px;
     background: white;
     text-align: center;
 }
@@ -212,10 +212,10 @@ body {
 
 /* ========== ДОСТИЖЕНИЯ ========== */
 .achievements {
-    background-image: url(./../img/ДостижениеФон.png);
+    background-image: url(./../img/услуги_блок2.png);
     background-size: cover;
     position: relative;
-    padding: 250px 20px;
+    padding: 230px 20px;
     text-align: center;
     overflow: hidden;
     margin: 0px 0px 50px 0px;

@@ -2,17 +2,19 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Уроки логопеда</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Уроки логопеда - Главная</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="./Font/GraphikLCG/stylesheet.css">
     <link rel="stylesheet" href="./Font/Ledger/stylesheet.css">
+    <!-- Подключаем Font Awesome для иконок -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
 
 <header class="header">
      <nav class="nav">
-
-        <a href="./index.html">Главная</a>
+        <a href="./index.html" class="active">Главная</a>
         <a href="./about.html">Обо мне</a>
         <a href="./Услуги.html">Услуги</a>
         <a href="#">Игры и задания</a>
@@ -34,71 +36,201 @@
             </div>
         </div>
 
-        <!-- Кнопка с глазом -->
+        <!-- Кнопка с глазом (версия для слабовидящих) -->
         <button class="eye-btn" title="Версия для слабовидящих">
-            
+            <i class="fas fa-eye"></i>
         </button>
     </nav>
 </header>
 
 <main>
-    <!-- HERO -->
+    <!-- HERO секция (шапка) -->
     <section class="hero">
-        <img src="./img/Дизайн фишка.png" alt="png" class="wave">
-
+        <img src="./img/Дизайн фишка.png" alt="Декоративная волна" class="wave">
         <div class="hero-content">
             <h1 class="zagolov">УРОКИ ЛОГОПЕДА</h1>
-            <p class="pzagolov">Персональный сайт логопеда-дефектолога<br>Нуримановой Г.Т.</p>
+            <p class="pzagolov">Персональный сайт логопеда-дефектолога Нуримановой Г.Т.</p>
             <button class="btn">Записаться на занятие</button>
         </div>
+        <!-- Иконки соцсетей УДАЛЕНЫ из шапки -->
     </section>
 
-    <!-- ABOUT -->
+    <!-- Блок "О логопеде" с фото (ABOUT) -->
     <section class="about">
-        <div class="text">
-            <p>
-                Текст о специалисте,
-                подходе к занятиям, опыте работы,
-                индивидуальных программах и результатах.Текст о специалисте,
-                подходе к занятиям, опыте работы,
-                индивидуальных программах и результатах.Текст о специалисте,
-                подходе к занятиям, опыте работы,
-                индивидуальных программах и результатах.
-                
-            </p>
+        <div class="about-container">
+            <div class="about-text">
+                <h2>Здравствуйте!</h2>
+                <p>
+                    Я — Нуриманова Г.Т., логопед-дефектолог. Моя работа — помогать детям и взрослым говорить легко, чисто и уверенно. 
+                    Для этого я использую индивидуальный подход, сочетая классические методики с современными приёмами.
+                </p>
+                <p>
+                    Вы можете узнать больше о моей работе на этом сайте, задать вопросы и записаться на первую консультацию. 
+                    Давайте создавать успешные истории общения вместе!
+                </p>
+            </div>
+            <div class="about-photo">
+                <div class="photo-placeholder">
+                    <i class="fas fa-user-circle"></i>
+                </div>
+            </div>
         </div>
-        <div class="photo-placeholder"></div>
     </section>
 
-    <!-- FEATURES -->
-    <section class="features">
-        <div class="card"></div>
-        <div class="card"></div>
-        <div class="card"></div>
-        <div class="card"></div>
+    <!-- Карточки с информацией (3 штуки с иконками) -->
+    <section class="info-cards">
+        <div class="card">
+            <div class="card-icon"><i class="fas fa-child"></i></div>
+            <h3>Для детей</h3>
+            <p>Исправление звуков, развитие речи, подготовка к школе. Занятия в игровой форме.</p>
+        </div>
+        <div class="card">
+            <div class="card-icon"><i class="fas fa-user-tie"></i></div>
+            <h3>Для взрослых</h3>
+            <p>Чистая дикция, работа с голосом, восстановление речи. Для карьеры и уверенности.</p>
+        </div>
+        <div class="card">
+            <div class="card-icon"><i class="fas fa-comment-dots"></i></div>
+            <h3>Первая консультация</h3>
+            <p>Бесплатная 15-минутная онлайн-встреча для знакомства и определения целей.</p>
+        </div>
     </section>
 
-    <!-- GALLERY -->
+    <!-- Блок "Услуги" (заметка, торчащая слева) -->
+    <section class="services-notice">
+        <div class="notice-content">
+            <h2>УСЛУГИ</h2>
+            <ul class="services-list">
+                <li><i class="fas fa-check-circle"></i> Не выговаривает буквы: помощь, если ребёнок картавит, шепелявит или искажает другие звуки. Индивидуальный курс с играми.</li>
+                <li><i class="fas fa-check-circle"></i> Ребёнок мало говорит: запуск и развитие речи у малышей от 2 лет. Эффективные методики для родителей и занятия со специалистом.</li>
+                <li><i class="fas fa-check-circle"></i> Хочу говорить чётко: постановка дикции, работа с голосом и дыханием. Для работы, презентаций и личной уверенности.</li>
+                <li><i class="fas fa-check-circle"></i> Восстановление речи после болезней: профессиональная поддержка для взрослых после инсульта, операций или травм. Занятия для возвращения навыков общения.</li>
+                <li><i class="fas fa-check-circle"></i> Первая онлайн-консультация: Бесплатно | 20 минут. Познакомимся, определим вашу задачу и наметим план действий.</li>
+            </ul>
+            <a href="#" class="more-link">Посмотреть еще...</a>
+        </div>
+    </section>
+
+    <!-- Блок ОТЗЫВЫ (расширенный слайдер) -->
+    <section class="reviews">
+        <h2 class="zagolov2">ОТЗЫВЫ ОТ НАШИХ КЛИЕНТОВ</h2>
+        
+        <div class="slider-container">
+            <button class="slider-arrow prev"><i class="fas fa-chevron-left"></i></button>
+            
+            <div class="slider-track">
+                <div class="slide active">
+                    <div class="review-content">
+                        <h4>Катя П.О.</h4>
+                        <p class="review-text">
+                            Водили дочку исправлять «Ш» и «Ж». Ожидали чётких звуков, а получили в придачу уверенность в себе! 
+                            Раньше на утренниках она молчала в уголке, а теперь просит главную роль — говорит, что её речь красивая. 
+                            Оказывается, чистое произношение — это не только про буквы, это про самоощущение. Спасибо!
+                        </p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="review-content">
+                        <h4>Алексей М.</h4>
+                        <p class="review-text">
+                            Обращался для постановки дикции перед публичными выступлениями. 
+                            Уже через несколько занятий почувствовал уверенность, голос стал звучать глубже. 
+                            Очень профессиональный подход и комфортная атмосфера. Отдельное спасибо за упражнения для дыхания!
+                        </p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="review-content">
+                        <h4>Елена, мама Кирилла</h4>
+                        <p class="review-text">
+                            Сын в 3 года почти не говорил, переживали очень. 
+                            После курса занятий появились первые фразы, сейчас активно пополняется словарный запас. 
+                            Огромная благодарность за терпение и профессионализм! Ходим уже полгода и не нарадуемся результатам.
+                        </p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="review-content">
+                        <h4>Марина В.</h4>
+                        <p class="review-text">
+                            Занималась восстановлением речи после инсульта с мамой. 
+                            Очень бережный подход, индивидуальная программа. Спустя 3 месяца мама снова начала говорить предложениями. 
+                            Спасибо большое за ваше тепло и поддержку!
+                        </p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="review-content">
+                        <h4>Дмитрий, папа Артема</h4>
+                        <p class="review-text">
+                            Сын не выговаривал "р" и "л", стеснялся отвечать у доски. 
+                            За 2 месяца занятий поставили все звуки, теперь Артем участвует в школьных конкурсах чтецов. 
+                            Спасибо за веру в нашего ребенка!
+                        </p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="review-content">
+                        <h4>Светлана К.</h4>
+                        <p class="review-text">
+                            Пришла во взрослом возрасте исправлять картавость, о которой мечтала забыть с детства. 
+                            Думала, уже поздно что-то менять, но специалист подобрала методику и у меня получилось! 
+                            Теперь не стесняюсь выступать на работе. Огромное спасибо!
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <button class="slider-arrow next"><i class="fas fa-chevron-right"></i></button>
+        </div>
+        
+        <!-- Индикаторы слайдов (точки) -->
+        <div class="slider-dots">
+            <span class="dot active" data-index="0"></span>
+            <span class="dot" data-index="1"></span>
+            <span class="dot" data-index="2"></span>
+            <span class="dot" data-index="3"></span>
+            <span class="dot" data-index="4"></span>
+            <span class="dot" data-index="5"></span>
+        </div>
+    </section>
+
+    <!-- ГАЛЕРЕЯ -->
     <section class="gallery">
-        <h1 class="zagolov2">НАША ГАЛЕРЕЯ</h1>
+        <h2 class="zagolov2">НАША ГАЛЕРЕЯ</h2>
         <div class="grid">
-            <div class="img"></div>
-            <div class="img"></div>
-            <div class="img"></div>
-            <div class="img"></div>
-            <div class="img"></div>
-            <div class="img"></div>
+            <div class="img"><i class="fas fa-image"></i></div>
+            <div class="img"><i class="fas fa-image"></i></div>
+            <div class="img"><i class="fas fa-image"></i></div>
+            <div class="img"><i class="fas fa-image"></i></div>
+            <div class="img"><i class="fas fa-image"></i></div>
+            <div class="img"><i class="fas fa-image"></i></div>
         </div>
     </section>
 
-    <section class="footer">
-      
-    </section>
+    <!-- FOOTER (подвал) - ТОЛЬКО соцсети, админка и копирайт -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-social">
+                <a href="#" class="social-icon"><i class="fab fa-vk"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-telegram"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+            </div>
+            
+            <div class="footer-admin">
+                <a href="/admin" class="admin-btn"><i class="fas fa-cog"></i> Вход для администратора</a>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2026 Нуриманова Г.Т. Все права защищены.</p>
+        </div>
+    </footer>
 </main>
 
-<!-- Кнопка вверх -->
-<button id="toTop">
-    <img src="./img/стрелка.png" alt="Наверх">
+<!-- Кнопка вверх фиксированная -->
+<button id="toTopFixed" class="to-top-fixed" style="display: none;">
+    <i class="fas fa-arrow-up"></i>
 </button>
 
 <script src="js/main.js"></script>

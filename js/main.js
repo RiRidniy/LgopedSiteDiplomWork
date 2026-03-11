@@ -1,76 +1,106 @@
-// стрелка пермотки
-const toTop = document.getElementById("toTop");
+// Слайдер отзывов
+document.addEventListener('DOMContentLoaded', function() {
+    const slides = document.querySelectorAll('.slide');
+    const dots = document.querySelectorAll('.dot');
+    const prevBtn = document.querySelector('.prev');
+    const nextBtn = document.querySelector('.next');
+    let currentIndex = 0;
+    let autoSlideInterval;
 
-window.addEventListener("scroll", () => {
-    if (window.scrollY > 300) {
-        toTop.style.display = "block";
-    } else {
-        toTop.style.display = "none";
+    // Функция показа слайда по индексу
+    function showSlide(index) {
+        if (index >= slides.length) currentIndex = 0;
+        else if (index < 0) currentIndex = slides.length - 1;
+        else currentIndex = index;
+
+        slides.forEach(slide => slide.classList.remove('active'));
+        dots.forEach(dot => dot.classList.remove('active'));
+
+        slides[currentIndex].classList.add('active');
+        dots[currentIndex].classList.add('active');
     }
-});
 
-toTop.addEventListener("click", () => {
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
+    // Переключение по кнопкам
+    if (prevBtn && nextBtn) {
+        prevBtn.addEventListener('click', () => {
+            showSlide(currentIndex - 1);
+            resetAutoSlide();
+        });
+
+        nextBtn.addEventListener('click', () => {
+            showSlide(currentIndex + 1);
+            resetAutoSlide();
+        });
+    }
+
+    // Переключение по точкам
+    dots.forEach((dot, i) => {
+        dot.addEventListener('click', () => {
+            showSlide(i);
+            resetAutoSlide();
+        });
     });
-});
 
-// выподающее меню
-const dropdown = document.querySelector('.dropdown');
-const dropBtn = document.querySelector('.dropbtn');
+    // Автоматическое перелистывание
+    function startAutoSlide() {
+        autoSlideInterval = setInterval(() => {
+            showSlide(currentIndex + 1);
+        }, 5000); // 5 секунд
+    }
 
-dropBtn.addEventListener('click', (e) => {
-    e.stopPropagation();
-    dropdown.classList.toggle('active');
-});
+    function resetAutoSlide() {
+        clearInterval(autoSlideInterval);
+        startAutoSlide();
+    }
 
-document.addEventListener('click', () => {
-    dropdown.classList.remove('active');
-});
+    // Запускаем автослайдер
+    if (slides.length > 0) {
+        showSlide(0);
+        startAutoSlide();
+    }
 
-// слайдер
-const slides = [
-    "Отличный специалист, ребёнок заговорил!",
-    "Очень внимательный и профессиональный подход.",
-    "Результат уже после первых занятий."
-];
+    // Кнопка "Наверх"
+    const toTopBtn = document.getElementById('toTopFixed');
+    const footerToTop = document.querySelector('.to-top-btn');
 
-let index = 0;
-const slide = document.querySelector(".slide p");
+    function scrollToTop() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    }
 
-document.querySelector(".left").onclick = () => {
-    index = (index - 1 + slides.length) % slides.length;
-    slide.textContent = slides[index];
-};
+    if (toTopBtn) {
+        toTopBtn.addEventListener('click', scrollToTop);
+        // Показываем/скрываем кнопку при прокрутке
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                toTopBtn.style.display = 'flex';
+            } else {
+                toTopBtn.style.display = 'none';
+            }
+        });
+    }
 
-document.querySelector(".right").onclick = () => {
-    index = (index + 1) % slides.length;
-    slide.textContent = slides[index];
-};
+    if (footerToTop) {
+        footerToTop.addEventListener('click', scrollToTop);
+    }
 
-// модальное окно
-const cards = document.querySelectorAll(".game-card[data-modal]");
-const modals = document.querySelectorAll(".modal");
-const closes = document.querySelectorAll(".close");
+    // Выпадающее меню (если нужно по клику, а не по hover)
+    const dropdown = document.querySelector('.dropdown');
+    if (dropdown) {
+        dropdown.addEventListener('click', function(e) {
+            e.stopPropagation();
+            this.classList.toggle('active');
+        });
+    }
 
-cards.forEach(card => {
-    card.addEventListener("click", () => {
-        const modalId = card.dataset.modal;
-        document.getElementById(modalId).style.display = "flex";
-    });
-});
-
-closes.forEach(btn => {
-    btn.addEventListener("click", () => {
-        btn.closest(".modal").style.display = "none";
-    });
-});
-
-window.addEventListener("click", e => {
-    modals.forEach(modal => {
-        if (e.target === modal) {
-            modal.style.display = "none";
-        }
-    });
+    // Версия для слабовидящих (заглушка)
+    const eyeBtn = document.querySelector('.eye-btn');
+    if (eyeBtn) {
+        eyeBtn.addEventListener('click', function() {
+            alert('Здесь будет включение версии для слабовидящих');
+            // Можно добавить логику переключения CSS
+        });
+    }
 });

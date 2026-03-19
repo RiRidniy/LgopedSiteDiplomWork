@@ -2,21 +2,23 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Уроки логопеда</title>
-    <link rel="stylesheet" href="css/услуги.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Услуги - Логопед Нуриманова Г.Т.</title>
+    <link rel="stylesheet" href="css/uslugi.css">
     <link rel="stylesheet" href="./Font/GraphikLCG/stylesheet.css">
     <link rel="stylesheet" href="./Font/Ledger/stylesheet.css">
+    <!-- Подключаем Font Awesome для иконок -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
 
 <header class="header">
-     <nav class="nav">
-
+    <nav class="nav">
         <a href="./index.html">Главная</a>
         <a href="./about.html">Обо мне</a>
-        <a href="./Услуги.html">Услуги</a>
-        <a href="./Игры.html">Игры и задания</a>
-        <a href="./Контакты.html">Контакты</a>
+        <a href="./Услуги.html" class="active">Услуги</a>
+        <a href="./play.html">Игры и задания</a>
+         <a href="./contacts.html">Контакты</a>
 
         <!-- Выпадающее меню -->
         <div class="dropdown">
@@ -24,85 +26,269 @@
                 Дефекты речи ▾
             </button>
             <div class="dropdown-content">
-                <a href="#">Дислалия</a>
-                <a href="#">Дизартрия</a>
-                <a href="#">Дисграфия</a>
-                <a href="#">Алалия</a>
-                <a href="#">Афазия</a>
-                <a href="#">Заикание</a>
-                <a href="#">ОНР</a>
+                 <a href="./content.html">Дислалия</a>
+                <a href="./content.html">Дизартрия</a>
+                <a href="./content.html">Дисграфия</a>
+                <a href="./content.html">Алалия</a>
+                <a href="./content.html">Афазия</a>
+                <a href="./content.html">Заикание</a>
+                <a href="./content.html">ОНР</a>
             </div>
         </div>
 
         <!-- Кнопка с глазом -->
         <button class="eye-btn" title="Версия для слабовидящих">
-            
+            <i class="fas fa-eye"></i>
         </button>
     </nav>
 </header>
 
-<section class="shapka">
+<img src="./img/низ шапка.png" alt="" class="rasdelitel">
+
+<main>
+    <!-- Заголовок страницы -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">НАШИ УСЛУГИ</h1>
+            <p class="page-subtitle">Профессиональная логопедическая помощь для детей и взрослых</p>
+        </div>
+    </section>
+
+    <!-- Блок услуг - карточки с иконками (по 3 в ряду) -->
+    <section class="services-grid-section">
+        <div class="container">
+            <div class="services-grid">
+                <!-- Карточка 1 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-child"></i>
+                    </div>
+                    <h3>Постановка звуков</h3>
+                    <p>Исправление картавости, шепелявения и других нарушений произношения у детей от 4 лет</p>
+                </div>
+                <!-- Карточка 2 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-comment-dots"></i>
+                    </div>
+                    <h3>Запуск речи</h3>
+                    <p>Помощь неговорящим детям от 2 лет. Развитие понимания речи и появление первых слов</p>
+                </div>
+                <!-- Карточка 3 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <h3>Подготовка к школе</h3>
+                    <p>Обучение чтению, письму, развитие фонематического слуха и связной речи</p>
+                </div>
+                <!-- Карточка 4 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h3>Дикция для взрослых</h3>
+                    <p>Постановка четкой дикции, работа с голосом и дыханием для публичных выступлений</p>
+                </div>
+                <!-- Карточка 5 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h3>Восстановление речи</h3>
+                    <p>Занятия после инсульта, травм и операций. Возвращение навыков общения</p>
+                </div>
+                <!-- Карточка 6 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-laptop"></i>
+                    </div>
+                    <h3>Онлайн-консультации</h3>
+                    <p>Занятия через видеосвязь из любой точки мира. Удобно и эффективно</p>
+                </div>
+                <!-- Карточка 7 -->
+                <!-- <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-puzzle-piece"></i>
+                    </div>
+                    <h3>Логопедический массаж</h3>
+                    <p>Профессиональный массаж артикуляционного аппарата для коррекции сложных нарушений</p>
+                </div> -->
+                <!-- Карточка 8 -->
+                <!-- <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-pencil-alt"></i>
+                    </div>
+                    <h3>Коррекция дисграфии</h3>
+                    <p>Помощь при нарушениях письма и чтения у школьников. Устранение ошибок на письме</p>
+                </div> -->
+                <!-- Карточка 9 -->
+                <!-- <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-microphone"></i>
+                    </div>
+                    <h3>Техника речи</h3>
+                    <p>Развитие силы голоса, интонационной выразительности и уверенности в общении</p>
+                </div> -->
+            </div>
+        </div>
+    </section>
+
+<!-- Форма записи на прием -->
+<section class="appointment-section">
+    <div class="container">
+       
+        
+        <form class="appointment-form" id="appointmentForm"> 
+            <h2 class="section-title">ЗАПИСАТЬСЯ НА ПРИЕМ</h2>
+            <!-- Выпадающий список с услугами -->
+            <div class="form-group">
+                <label for="serviceSelect">Выберите услугу *</label>
+                <div class="custom-select">
+                    <select id="serviceSelect" name="service" required>
+                        <option value="" disabled selected>Выберите услугу...</option>
+                        <option value="sound">Постановка звуков</option>
+                        <option value="speech">Запуск речи</option>
+                        <option value="school">Подготовка к школе</option>
+                        <option value="diction">Дикция для взрослых</option>
+                        <option value="recovery">Восстановление речи</option>
+                        <option value="online">Онлайн-консультации</option>
+                        <option value="massage">Логопедический массаж</option>
+                        <option value="dysgraphia">Коррекция дисграфии</option>
+                        <option value="voice">Техника речи</option>
+                    </select>
+                    <i class="fas fa-chevron-down select-arrow"></i>
+                </div>
+            </div>
+
+            <!-- Имя родителя / клиента -->
+            <div class="form-group">
+                <label for="parentName">Имя родителя / клиента *</label>
+                <input type="text" id="parentName" name="parentName" placeholder="Введите ваше имя" required>
+            </div>
+
+            <!-- Номер телефона -->
+            <div class="form-group">
+                <label for="phone">Номер телефона *</label>
+                <input type="tel" id="phone" name="phone" placeholder="+7 (___) ___-__-__" required>
+            </div>
+
+            <!-- Почта -->
+            <div class="form-group">
+                <label for="email">Почта</label>
+                <input type="email" id="email" name="email" placeholder="example@mail.ru">
+            </div>
+
+            <!-- Имя ребенка (опционально) -->
+            <div class="form-group">
+                <label for="childName">Имя ребенка</label>
+                <input type="text" id="childName" name="childName" placeholder="Если запись для ребенка">
+            </div>
+
+            <!-- Описание проблемы -->
+            <div class="form-group full-width">
+                <label for="problem">Опишите проблему подробнее</label>
+                <textarea id="problem" name="problem" rows="4" placeholder="Расскажите, что вас беспокоит..."></textarea>
+            </div>
+
+            <!-- Блок с согласием на обработку данных -->
+            <div class="form-group consent-group">
+                <label class="consent-label">
+                    <input type="checkbox" id="dataConsent" name="dataConsent" required>
+                    <span class="consent-text">
+                        Я согласен на обработку персональных данных и принимаю 
+                        <a href="#" class="policy-link" id="policyLink">правила обработки данных</a> *
+                    </span>
+                </label>
+            </div>
+
+            <!-- Кнопка отправки -->
+            <div class="form-group full-width">
+                <button type="submit" class="submit-btn" id="submitBtn">Отправить заявку</button>
+            </div>
+
+            <div class="form-note">
+                <i class="fas fa-lock"></i> Ваши данные в безопасности и не передаются третьим лицам
+            </div>
+        </form>
+    </div>
 </section>
 
-<section class="txt"><h1>УСЛУГИ</h1></section>
+<!-- Модальное окно с правилами обработки данных -->
+<div id="policyModal" class="modal policy-modal">
+    <div class="modal-content policy-modal-content">
+        <span class="close-modal policy-close">&times;</span>
+        <h3 class="modal-title">Правила обработки персональных данных</h3>
+        
+        <div class="policy-text">
+            <h4>1. Общие положения</h4>
+            <p>Настоящая Политика обработки персональных данных составлена в соответствии с требованиями Федерального закона от 27.07.2006. №152-ФЗ «О персональных данных» и определяет порядок обработки персональных данных и меры по обеспечению безопасности персональных данных.</p>
+            
+            <h4>2. Какие данные мы собираем</h4>
+            <p>При заполнении формы записи на прием мы собираем следующие данные: имя, номер телефона, адрес электронной почты, имя ребенка (при наличии), описание проблемы.</p>
+            
+            <h4>3. Цель сбора данных</h4>
+            <p>Ваши данные используются исключительно для связи с вами, уточнения деталей записи и предоставления логопедических услуг. Мы не передаем ваши данные третьим лицам без вашего явного согласия.</p>
+            
+            <h4>4. Срок хранения данных</h4>
+            <p>Ваши персональные данные хранятся не дольше, чем это необходимо для целей обработки, если иное не предусмотрено законодательством.</p>
+            
+            <h4>5. Ваши права</h4>
+            <p>Вы имеете право на получение информации о том, какие ваши данные хранятся, а также на их удаление по вашему запросу.</p>
+            
+            <h4>6. Контактная информация</h4>
+            <p>По всем вопросам, связанным с обработкой персональных данных, вы можете обратиться по телефону или электронной почте, указанным на сайте.</p>
+        </div>
+        
+        <button class="submit-btn policy-accept-btn">Я ознакомлен(а) и принимаю условия</button>
+    </div>
+</div>
 
-<!-- УСЛУГИ -->
-<section class="services">
-    <img src="img/lines.svg" class="lines-top" alt="">
-
-    <div class="services-grid">
-        <!-- Карточки услуг (добавляй / удаляй сколько нужно) -->
-        <div class="service-card">Индивидуальные занятия</div>
-        <div class="service-card">Онлайн-консультация</div>
-        <div class="service-card">Диагностика речи</div>
-        <div class="service-card">Коррекция звукопроизношения</div>
+    <!-- Декоративный разделитель -->
+    <div class="decor-divider">
+        <img src="./img/отзывполоски.png" alt="Декоративные точки" class="decor-img">
     </div>
 
-    <img src="img/waves-bottom.svg" class="waves-bottom" alt="">
-</section>
-
-<!-- ЗАПИСЬ НА ПРИЕМ -->
-<section class="appointment">
-    <h2>ЗАПИСАТЬСЯ НА ПРИЕМ</h2>
-
-    <form class="appointment-form">
-        <select required>
-            <option value="">Выберите услугу...</option>
-            <option>Индивидуальные занятия</option>
-            <option>Онлайн-консультация</option>
-            <option>Диагностика речи</option>
-            <option>Коррекция звукопроизношения</option>
-        </select>
-
-        <input type="text" placeholder="Имя родителя" required>
-        <input type="tel" placeholder="Номер телефона..." required>
-        <input type="email" placeholder="Почта...">
-        <input type="text" placeholder="Имя ребенка...">
-        <textarea placeholder="Опишите проблему подробнее..."></textarea>
-
-        <button type="submit">Отправить</button>
-    </form>
-</section>
-
-<!-- ОТЗЫВ -->
-<section class="feedback">
-    <img src="img/lines.svg" class="lines-feedback" alt="">
-    <p>
-        УЖЕ БЫЛИ У НАС? <br>
-        РАССКАЖИТЕ О СВОЕМ ОПЫТЕ, ОСТАВИВ
-        <a href="reviews.html">ОТЗЫВ</a>
-    </p>
-</section>
-
-<section class="footer">
-      
+    <!-- Блок с призывом оставить отзыв -->
+    <section class="review-cta">
+        <div class="container">
+            <div class="cta-content">
+                <i class="fas fa-star cta-icon"></i>
+                <h2 class="cta-text">
+                    УЖЕ У НАС БЫЛИ? РАССКАЖИТЕ О СВОЕМ ОПЫТЕ, ОСТАВИВ 
+                    <a href="#" class="review-link" id="reviewLink">ОТЗЫВ</a>
+                </h2>
+                <p class="cta-description">Ваше мнение поможет нам стать лучше, а другим клиентам — сделать правильный выбор</p>
+            </div>
+        </div>
     </section>
-    
-<!-- Кнопка вверх -->
-<button id="toTop">
-    <img src="./img/стрелка.png" alt="Наверх">
+
+<!-- ПОДВАЛ (как на главной) -->
+ <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-social">
+                <a href="#" class="social-icon"><i class="fab fa-vk"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-telegram"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+            </div>
+            
+            <div class="footer-admin">
+                <a href="/admin" class="admin-btn"><i class="fas fa-cog"></i> Вход для администратора</a>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2026 Нуриманова Г.Т. Все права защищены.</p>
+        </div>
+    </footer>
+</main>
+
+
+<!-- Кнопка вверх фиксированная -->
+<button id="toTopFixed" class="to-top-fixed" style="display: none;">
+    <i class="fas fa-arrow-up"></i>
 </button>
 
-<script src="js/main.js"></script>
+<script src="js/uslugi.js"></script>
 </body>
 </html>

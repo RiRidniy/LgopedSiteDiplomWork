@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Все материалы - Логопед Нуриманова Г.Т.</title>
+    <link rel="stylesheet" href="css/content.css">
+    <link rel="stylesheet" href="./Font/GraphikLCG/stylesheet.css">
+    <link rel="stylesheet" href="./Font/Ledger/stylesheet.css">
+    <!-- Подключаем Font Awesome для иконок -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+<header class="header">
+    <nav class="nav">
+        <a href="./index.html">Главная</a>
+        <a href="./about.html">Обо мне</a>
+        <a href="./Услуги.html">Услуги</a>
+        <a href="./play.html">Игры и задания</a>
+        <a href="./contacts.html">Контакты</a>
+
+        <!-- Выпадающее меню -->
+        <div class="dropdown">
+            <button class="dropbtn">
+                Дефекты речи ▾
+            </button>
+            <div class="dropdown-content">
+                <a href="./content.html">Дислалия</a>
+                <a href="./content.html">Дизартрия</a>
+                <a href="./content.html">Дисграфия</a>
+                <a href="./content.html">Алалия</a>
+                <a href="./content.html">Афазия</a>
+                <a href="./content.html">Заикание</a>
+                <a href="./content.html">ОНР</a>
+            </div>
+        </div>
+
+        <!-- Кнопка с глазом -->
+        <button class="eye-btn" title="Версия для слабовидящих">
+            <i class="fas fa-eye"></i>
+        </button>
+    </nav>
+</header>
+
+<img src="./img/низ шапка.png" alt="Декоративный разделитель" class="rasdelitel">
+
+<main>
+    <!-- ЗАГОЛОВОК СТРАНИЦЫ -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">ВСЕ МАТЕРИАЛЫ</h1>
+            <p class="page-subtitle">Информация о речевых нарушениях, занятия по буквам и видео-уроки</p>
+        </div>
+    </section>
+
+    <!-- БЛОК ПОИСКА -->
+    <section class="search-section">
+        <div class="container">
+            <div class="search-container">
+                <div class="search-box">
+                    <i class="fas fa-search search-icon"></i>
+                    <input type="text" id="searchInput" class="search-input" placeholder="Поиск по всем материалам..." autocomplete="off">
+                    <button class="search-clear" id="searchClear"><i class="fas fa-times"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- БЛОК С ИНФОРМАЦИЕЙ О БОЛЕЗНЯХ -->
+    <section id="disorders" class="content-block disorders-block">
+        <div class="container-full">
+            <h2 class="block-title">
+                <i class="fas fa-notes-medical"></i>
+                РЕЧЕВЫЕ НАРУШЕНИЯ
+            </h2>
+            <p class="block-subtitle">Информация о различных речевых расстройствах</p>
+            
+            <!-- Дислалия -->
+            <div class="info-row">
+                <div class="info-icon">
+                    <i class="fas fa-ear-deaf"></i>
+                </div>
+                <div class="info-content">
+                    <h3>Дислалия</h3>
+                    <p class="info-desc">Нарушение звукопроизношения при нормальном слухе и сохранной иннервации речевого аппарата</p>
+                    <div class="info-features">
+                        <span><i class="fas fa-check-circle"></i> Искажение звуков</span>
+                        <span><i class="fas fa-check-circle"></i> Замены звуков</span>
+                        <span><i class="fas fa-check-circle"></i> Смешение звуков</span>
+                    </div>
+                    <div class="info-example">
+                        <strong>Пример:</strong> "лыба" вместо "рыба"
+                    </div>
+                </div>
+            </div>
+
+            <!-- Дизартрия -->
+            <div class="info-row">
+                <div class="info-icon">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <div class="info-content">
+                    <h3>Дизартрия</h3>
+                    <p class="info-desc">Нарушение произносительной стороны речи, обусловленное недостаточностью иннервации речевого аппарата</p>
+                    <div class="info-features">
+                        <span><i class="fas fa-check-circle"></i> Смазанная речь</span>
+                        <span><i class="fas fa-check-circle"></i> Изменение темпа</span>
+                        <span><i class="fas fa-check-circle"></i> Нарушение дыхания</span>
+                    </div>
+                    <div class="info-example">
+                        <strong>Пример:</strong> "ммо-ко" вместо "молоко"
+                    </div>
+                </div>
+            </div>
+
+            <!-- Дисграфия -->
+            <div class="info-row">
+                <div class="info-icon">
+                    <i class="fas fa-pencil-alt"></i>
+                </div>
+                <div class="info-content">
+                    <h3>Дисграфия</h3>
+                    <p class="info-desc">Частичное нарушение процесса письма, связанное с недостаточной сформированностью высших психических функций</p>
+                    <div class="info-features">
+                        <span><i class="fas fa-check-circle"></i> Ошибки на письме</span>
+                        <span><i class="fas fa-check-circle"></i> Замены букв</span>
+                        <span><i class="fas fa-check-circle"></i> Искажение слов</span>
+                    </div>
+                    <div class="info-example">
+                        <strong>Пример:</strong> "сапка" вместо "шапка"
+                    </div>
+                </div>
+            </div>
+
+            <!-- Алалия -->
+            <div class="info-row">
+                <div class="info-icon">
+                    <i class="fas fa-child"></i>
+                </div>
+                <div class="info-content">
+                    <h3>Алалия</h3>
+                    <p class="info-desc">Отсутствие или недоразвитие речи у детей при нормальном слухе и сохранном интеллекте</p>
+                    <div class="info-features">
+                        <span><i class="fas fa-check-circle"></i> Отсутствие речи</span>
+                        <span><i class="fas fa-check-circle"></i> Нарушение понимания</span>
+                        <span><i class="fas fa-check-circle"></i> Трудности обучения</span>
+                    </div>
+                    <div class="info-example">
+                        <strong>Пример:</strong> Ребенок понимает, но не говорит
+                    </div>
+                </div>
+            </div>
+
+            <!-- Афазия -->
+            <div class="info-row">
+                <div class="info-icon">
+                    <i class="fas fa-hospital-user"></i>
+                </div>
+                <div class="info-content">
+                    <h3>Афазия</h3>
+                    <p class="info-desc">Системное нарушение речи, возникающее при локальных поражениях коры головного мозга</p>
+                    <div class="info-features">
+                        <span><i class="fas fa-check-circle"></i> Распад речи</span>
+                        <span><i class="fas fa-check-circle"></i> Нарушение понимания</span>
+                        <span><i class="fas fa-check-circle"></i> Трудности называния</span>
+                    </div>
+                    <div class="info-example">
+                        <strong>Пример:</strong> Не может назвать предмет
+                    </div>
+                </div>
+            </div>
+
+            <!-- Заикание -->
+            <div class="info-row">
+                <div class="info-icon">
+                    <i class="fas fa-comment-dots"></i>
+                </div>
+                <div class="info-content">
+                    <h3>Заикание</h3>
+                    <p class="info-desc">Нарушение темпо-ритмической организации речи, обусловленное судорожным состоянием мышц речевого аппарата</p>
+                    <div class="info-features">
+                        <span><i class="fas fa-check-circle"></i> Повторы звуков</span>
+                        <span><i class="fas fa-check-circle"></i> Запинки</span>
+                        <span><i class="fas fa-check-circle"></i> Судороги</span>
+                    </div>
+                    <div class="info-example">
+                        <strong>Пример:</strong> "п-п-п-привет"
+                    </div>
+                </div>
+            </div>
+
+            <!-- ОНР -->
+            <div class="info-row">
+                <div class="info-icon">
+                    <i class="fas fa-language"></i>
+                </div>
+                <div class="info-content">
+                    <h3>ОНР (Общее недоразвитие речи)</h3>
+                    <p class="info-desc">Сложные речевые расстройства при сохранном слухе и интеллекте</p>
+                    <div class="info-features">
+                        <span><i class="fas fa-check-circle"></i> Бедный словарь</span>
+                        <span><i class="fas fa-check-circle"></i> Нарушение грамматики</span>
+                        <span><i class="fas fa-check-circle"></i> Связная речь</span>
+                    </div>
+                    <div class="info-example">
+                        <strong>Пример:</strong> Фразовая речь отсутствует
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- БЛОК С ЗАНЯТИЯМИ ПО БУКВАМ -->
+    <section id="letters" class="content-block letters-block">
+        <div class="container-full">
+            <h2 class="block-title">
+                <i class="fas fa-font"></i>
+                ЗАНЯТИЯ ПО БУКВАМ АЛФАВИТА
+            </h2>
+            <p class="block-subtitle">Интерактивные задания для изучения букв</p>
+            
+            <!-- Буква А -->
+            <div class="info-row">
+                <div class="info-icon letter-icon-large">А</div>
+                <div class="info-content">
+                    <h3>Буква А</h3>
+                    <p>Игры и задания для изучения буквы А</p>
+                    <div class="lesson-tags">
+                        <span class="lesson-tag"><i class="fas fa-play-circle"></i> Найди букву А</span>
+                        <span class="lesson-tag"><i class="fas fa-play-circle"></i> Раскрась картинки на А</span>
+                        <span class="lesson-tag"><i class="fas fa-play-circle"></i> Прописи буквы А</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Буква Б -->
+            <div class="info-row">
+                <div class="info-icon letter-icon-large">Б</div>
+                <div class="info-content">
+                    <h3>Буква Б</h3>
+                    <p>Игры и задания для изучения буквы Б</p>
+                    <div class="lesson-tags">
+                        <span class="lesson-tag"><i class="fas fa-play-circle"></i> Найди букву Б</span>
+                        <span class="lesson-tag"><i class="fas fa-play-circle"></i> Слова на букву Б</span>
+                        <span class="lesson-tag"><i class="fas fa-play-circle"></i> Прописи буквы Б</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Буква В -->
+            <div class="info-row">
+                <div class="info-icon letter-icon-large">В</div>
+                <div class="info-content">
+                    <h3>Буква В</h3>
+                    <p>Игры и задания для изучения буквы В</p>
+                    <div class="lesson-tags">
+                        <span class="lesson-tag"><i class="fas fa-play-circle"></i> Найди букву В</span>
+                        <span class="lesson-tag"><i class="fas fa-play-circle"></i> Слова на букву В</span>
+                        <span class="lesson-tag"><i class="fas fa-play-circle"></i> Прописи буквы В</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Продолжение для всех букв алфавита... (в реальном коде нужно добавить все 33 буквы) -->
+            <!-- Здесь для примера показаны первые 3 буквы, в реальном проекте нужно добавить остальные -->
+        </div>
+    </section>
+
+
+    <!-- БЛОК С ВИДЕО-ЗАНЯТИЯМИ -->
+    <section id="video" class="content-block videos-block">
+        <div class="container-full">
+            <h2 class="block-title">
+                <i class="fas fa-video"></i>
+                ВИДЕО-ЗАНЯТИЯ
+            </h2>
+            <p class="block-subtitle">Обучающие видео для домашних занятий</p>
+            
+            <!-- Видео 1 -->
+            <div class="info-row video-row">
+                <div class="video-preview-large" style="background: linear-gradient(135deg, #5a6adf, #8a9aff);">
+                    <i class="fas fa-play-circle"></i>
+                    <span class="video-duration">15:20</span>
+                </div>
+                <div class="info-content">
+                    <h3>Артикуляционная гимнастика</h3>
+                    <p>Комплекс упражнений для развития речевого аппарата</p>
+                    <div class="video-meta-large">
+                        <span><i class="fas fa-eye"></i> 2.5K просмотров</span>
+                        <span><i class="fas fa-calendar"></i> Март 2026</span>
+                    </div>
+                    <div class="video-exercises-large">
+                        <strong>Упражнения:</strong>
+                        <div class="exercise-tags">
+                            <span class="exercise-tag">"Улыбка"</span>
+                            <span class="exercise-tag">"Хоботок"</span>
+                            <span class="exercise-tag">"Лопатка"</span>
+                            <span class="exercise-tag">"Часики"</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Видео 2 -->
+            <div class="info-row video-row">
+                <div class="video-preview-large" style="background: linear-gradient(135deg, #6c5adf, #9a8aff);">
+                    <i class="fas fa-play-circle"></i>
+                    <span class="video-duration">12:45</span>
+                </div>
+                <div class="info-content">
+                    <h3>Постановка звука "Р"</h3>
+                    <p>Как научиться правильно произносить звук Р</p>
+                    <div class="video-meta-large">
+                        <span><i class="fas fa-eye"></i> 5.1K просмотров</span>
+                        <span><i class="fas fa-calendar"></i> Февраль 2026</span>
+                    </div>
+                    <div class="video-exercises-large">
+                        <strong>Этапы:</strong>
+                        <div class="exercise-tags">
+                            <span class="exercise-tag">Подготовительные упражнения</span>
+                            <span class="exercise-tag">Постановка вибрации</span>
+                            <span class="exercise-tag">Закрепление в слогах</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Видео 3 -->
+            <div class="info-row video-row">
+                <div class="video-preview-large" style="background: linear-gradient(135deg, #5a8adf, #8ab5ff);">
+                    <i class="fas fa-play-circle"></i>
+                    <span class="video-duration">10:30</span>
+                </div>
+                <div class="info-content">
+                    <h3>Постановка звука "Л"</h3>
+                    <p>Учимся говорить звук Л правильно</p>
+                    <div class="video-meta-large">
+                        <span><i class="fas fa-eye"></i> 3.8K просмотров</span>
+                        <span><i class="fas fa-calendar"></i> Январь 2026</span>
+                    </div>
+                    <div class="video-exercises-large">
+                        <strong>Упражнения:</strong>
+                        <div class="exercise-tags">
+                            <span class="exercise-tag">"Пароход гудит"</span>
+                            <span class="exercise-tag">"Индюк"</span>
+                            <span class="exercise-tag">"Качели"</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Видео 4 -->
+            <div class="info-row video-row">
+                <div class="video-preview-large" style="background: linear-gradient(135deg, #5aadff, #8ac9ff);">
+                    <i class="fas fa-play-circle"></i>
+                    <span class="video-duration">18:15</span>
+                </div>
+                <div class="info-content">
+                    <h3>Дыхательная гимнастика</h3>
+                    <p>Упражнения для развития речевого дыхания</p>
+                    <div class="video-meta-large">
+                        <span><i class="fas fa-eye"></i> 1.9K просмотров</span>
+                        <span><i class="fas fa-calendar"></i> Апрель 2026</span>
+                    </div>
+                    <div class="video-exercises-large">
+                        <strong>Упражнения:</strong>
+                        <div class="exercise-tags">
+                            <span class="exercise-tag">"Фокус"</span>
+                            <span class="exercise-tag">"Задуй свечу"</span>
+                            <span class="exercise-tag">"Мыльные пузыри"</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Видео 5 -->
+            <div class="info-row video-row">
+                <div class="video-preview-large" style="background: linear-gradient(135deg, #5a6adf, #8a9aff);">
+                    <i class="fas fa-play-circle"></i>
+                    <span class="video-duration">14:50</span>
+                </div>
+                <div class="info-content">
+                    <h3>Развитие фонематического слуха</h3>
+                    <p>Учимся различать звуки</p>
+                    <div class="video-meta-large">
+                        <span><i class="fas fa-eye"></i> 2.2K просмотров</span>
+                        <span><i class="fas fa-calendar"></i> Май 2026</span>
+                    </div>
+                    <div class="video-exercises-large">
+                        <strong>Игры:</strong>
+                        <div class="exercise-tags">
+                            <span class="exercise-tag">"Поймай звук"</span>
+                            <span class="exercise-tag">"Твердый-мягкий"</span>
+                            <span class="exercise-tag">"Глухой-звонкий"</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Видео 6 -->
+            <div class="info-row video-row">
+                <div class="video-preview-large" style="background: linear-gradient(135deg, #6c5adf, #9a8aff);">
+                    <i class="fas fa-play-circle"></i>
+                    <span class="video-duration">20:00</span>
+                </div>
+                <div class="info-content">
+                    <h3>Пальчиковые игры</h3>
+                    <p>Развитие мелкой моторики и речи</p>
+                    <div class="video-meta-large">
+                        <span><i class="fas fa-eye"></i> 3.2K просмотров</span>
+                        <span><i class="fas fa-calendar"></i> Июнь 2026</span>
+                    </div>
+                    <div class="video-exercises-large">
+                        <strong>Игры:</strong>
+                        <div class="exercise-tags">
+                            <span class="exercise-tag">"Сорока-ворона"</span>
+                            <span class="exercise-tag">"Ладушки"</span>
+                            <span class="exercise-tag">"Этот пальчик"</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- ПОДВАЛ (как на странице play.html) -->
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-social">
+            <a href="#" class="social-icon"><i class="fab fa-vk"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-telegram"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+        </div>
+        
+        <div class="footer-admin">
+            <a href="/admin" class="admin-btn"><i class="fas fa-cog"></i> Вход для администратора</a>
+        </div>
+    </div>
+    
+    <div class="footer-bottom">
+        <p>&copy; 2026 Нуриманова Г.Т. Все права защищены.</p>
+    </div>
+</footer>
+
+<!-- Кнопка вверх фиксированная -->
+<button id="toTopFixed" class="to-top-fixed" style="display: none;">
+    <i class="fas fa-arrow-up"></i>
+</button>
+
+<script src="js/content.js"></script>
+</body>
+</html>

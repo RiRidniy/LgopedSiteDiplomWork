@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вход в админ-панель - Логопед Нуриманова Г.Т.</title>
+    <link rel="stylesheet" href="css/adminvhod.css">
+    <link rel="stylesheet" href="./Font/GraphikLCG/stylesheet.css">
+    <link rel="stylesheet" href="./Font/Ledger/stylesheet.css">
+    <!-- Подключаем Font Awesome для иконок -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+<!-- Кнопка возврата -->
+<a href="./index.html" class="back-btn" title="Вернуться на сайт">
+    <i class="fas fa-arrow-left"></i>
+    <span>На сайт</span>
+</a>
+
+<!-- Форма входа -->
+<div class="login-container">
+    <form class="login-form" id="loginForm">
+        <h2 class="form-title">ПАНЕЛЬ АДМИНА</h2>
+        
+        <!-- Поле логин -->
+        <div class="form-group">
+            <label for="username">Логин</label>
+            <input type="text" id="username" name="username" placeholder="Введите логин" required>
+        </div>
+
+        <!-- Поле пароль -->
+        <div class="form-group">
+            <label for="password">Пароль</label>
+            <div class="password-wrapper">
+                <input type="password" id="password" name="password" placeholder="Введите пароль" required>
+                <button type="button" class="toggle-password" title="Показать/скрыть пароль">
+                    <i class="fas fa-eye"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Блок с согласием на обработку данных -->
+        <div class="form-group consent-group">
+            <label class="consent-label">
+                <input type="checkbox" id="dataConsent" name="dataConsent" required>
+                <span class="consent-text">
+                    Я согласен на обработку персональных данных и принимаю 
+                    <a href="#" class="policy-link" id="policyLink">правила обработки данных</a> *
+                </span>
+            </label>
+        </div>
+
+        <!-- Кнопка входа -->
+        <div class="form-group">
+            <button type="submit" class="login-btn" id="loginBtn" disabled>ВОЙТИ</button>
+        </div>
+
+        <!-- Сообщение об ошибке -->
+        <div class="error-message" id="errorMessage" style="display: none;">
+            <i class="fas fa-exclamation-circle"></i>
+            <span id="errorText">Неверный логин или пароль</span>
+        </div>
+
+        <div class="form-note">
+            <i class="fas fa-lock"></i> Ваши данные в безопасности
+        </div>
+    </form>
+</div>
+
+<!-- Модальное окно с правилами обработки данных -->
+<div id="policyModal" class="modal policy-modal">
+    <div class="modal-content policy-modal-content">
+        <span class="close-modal policy-close">&times;</span>
+        <h3 class="modal-title">Правила обработки персональных данных</h3>
+        
+        <div class="policy-text">
+            <h4>1. Общие положения</h4>
+            <p>Настоящая Политика обработки персональных данных составлена в соответствии с требованиями Федерального закона от 27.07.2006. №152-ФЗ «О персональных данных» и определяет порядок обработки персональных данных и меры по обеспечению безопасности персональных данных.</p>
+            
+            <h4>2. Какие данные мы собираем</h4>
+            <p>При входе в админ-панель мы собираем следующие данные: логин, пароль, IP-адрес, данные о сессии.</p>
+            
+            <h4>3. Цель сбора данных</h4>
+            <p>Ваши данные используются исключительно для авторизации в системе управления сайтом и обеспечения безопасности.</p>
+            
+            <h4>4. Срок хранения данных</h4>
+            <p>Ваши персональные данные хранятся не дольше, чем это необходимо для целей обработки, если иное не предусмотрено законодательством.</p>
+            
+            <h4>5. Ваши права</h4>
+            <p>Вы имеете право на получение информации о том, какие ваши данные хранятся, а также на их удаление по вашему запросу.</p>
+            
+            <h4>6. Контактная информация</h4>
+            <p>По всем вопросам, связанным с обработкой персональных данных, вы можете обратиться по телефону или электронной почте, указанным на сайте.</p>
+        </div>
+        
+        <button class="submit-btn policy-accept-btn">Я ознакомлен(а) и принимаю условия</button>
+    </div>
+</div>
+
+<script src="js/adminvhod.js"></script>
+</body>
+</html>

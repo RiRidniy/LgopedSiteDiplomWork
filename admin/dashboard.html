@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Админ-панель - Логопед Нуриманова Г.Т.</title>
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../Font/GraphikLCG/stylesheet.css">
+    <link rel="stylesheet" href="../Font/Ledger/stylesheet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+<div class="admin-container">
+    <!-- Боковое меню -->
+    <aside class="admin-sidebar">
+        <div class="sidebar-header">
+            <h2><i class="fas fa-cog"></i> Админ-панель</h2>
+            <a href="../index.html" class="back-to-site" target="_blank">
+                <i class="fas fa-external-link-alt"></i> На сайт
+            </a>
+        </div>
+        <nav class="sidebar-nav">
+            <a href="#" class="nav-item active" data-section="dashboard">
+                <i class="fas fa-tachometer-alt"></i> Главная
+            </a>
+            <a href="#" class="nav-item" data-section="hero">
+                <i class="fas fa-home"></i> Шапка (Hero)
+            </a>
+            <a href="#" class="nav-item" data-section="about">
+                <i class="fas fa-user"></i> О себе
+            </a>
+            <a href="#" class="nav-item" data-section="services">
+                <i class="fas fa-concierge-bell"></i> Услуги
+            </a>
+            <a href="#" class="nav-item" data-section="letters">
+                <i class="fas fa-font"></i> Буквы алфавита
+            </a>
+            <a href="#" class="nav-item" data-section="video">
+                <i class="fas fa-video"></i> Видео-занятия
+            </a>
+            <a href="#" class="nav-item" data-section="disorders">
+                <i class="fas fa-notes-medical"></i> Речевые нарушения
+            </a>
+            <a href="#" class="nav-item" data-section="reviews">
+                <i class="fas fa-star"></i> Отзывы
+            </a>
+            <a href="#" class="nav-item" data-section="contacts">
+                <i class="fas fa-address-card"></i> Контакты
+            </a>
+            <a href="#" class="nav-item" data-section="achievements">
+                <i class="fas fa-award"></i> Достижения
+            </a>
+        </nav>
+        <div class="sidebar-footer">
+            <a href="../adminvhod.html" class="logout-btn" id="logoutBtn">
+                <i class="fas fa-sign-out-alt"></i> Выход
+            </a>
+        </div>
+    </aside>
+
+    <!-- Основной контент -->
+    <main class="admin-main">
+        <!-- Шапка админки -->
+        <header class="admin-header">
+            <h1 id="pageTitle">Панель управления</h1>
+            <div class="admin-user">
+                <span><i class="fas fa-user-shield"></i> Администратор</span>
+                <span id="currentTime"></span>
+            </div>
+        </header>
+
+        <!-- Контент секций -->
+        <div class="admin-content">
+            <!-- Секция: Dashboard -->
+            <div id="dashboard-section" class="section-content active">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <i class="fas fa-file-alt"></i>
+                        <div class="stat-info">
+                            <h3>Всего материалов</h3>
+                            <p id="totalMaterials">0</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-star"></i>
+                        <div class="stat-info">
+                            <h3>Отзывов</h3>
+                            <p id="totalReviews">6</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-font"></i>
+                        <div class="stat-info">
+                            <h3>Букв в алфавите</h3>
+                            <p>33</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-video"></i>
+                        <div class="stat-info">
+                            <h3>Видео-уроков</h3>
+                            <p>6</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="quick-actions">
+                    <h3>Быстрые действия</h3>
+                    <div class="action-buttons">
+                        <button class="action-btn" data-section="services"><i class="fas fa-plus"></i> Добавить услугу</button>
+                        <button class="action-btn" data-section="reviews"><i class="fas fa-plus"></i> Добавить отзыв</button>
+                        <button class="action-btn" data-section="video"><i class="fas fa-plus"></i> Добавить видео</button>
+                        <button class="action-btn" data-section="disorders"><i class="fas fa-plus"></i> Добавить нарушение</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Секция: Шапка (Hero) -->
+            <div id="hero-section" class="section-content">
+                <h2>Редактирование шапки сайта</h2>
+                <form id="heroForm">
+                    <div class="form-group">
+                        <label>Заголовок</label>
+                        <input type="text" id="heroTitle" value="УРОКИ ЛОГОПЕДА" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>Подзаголовок</label>
+                        <input type="text" id="heroSubtitle" value="Персональный сайт логопеда-дефектолога Нуримановой Г.Т." class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>Текст на кнопке</label>
+                        <input type="text" id="heroBtnText" value="Записаться на занятие" class="form-control">
+                    </div>
+                    <button type="submit" class="save-btn"><i class="fas fa-save"></i> Сохранить изменения</button>
+                </form>
+            </div>
+
+            <!-- Секция: О себе -->
+            <div id="about-section" class="section-content">
+                <h2>Редактирование информации о себе</h2>
+                <form id="aboutForm">
+                    <div class="form-group">
+                        <label>Имя и должность</label>
+                        <input type="text" id="aboutName" value="Нуриманова Гульдар Тимерхановна" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>Текст о себе (первый абзац)</label>
+                        <textarea id="aboutText1" rows="4" class="form-control">Я — логопед Нуриманова Гульдар Тимерхановна, специализируюсь на коррекции звукопроизношения, развитии речи у детей и работе с дикцией у взрослых. Работаю очно с выездом и онлайн, используя проверенные методики, чтобы качественная логопедическая помощь была доступна каждому, независимо от места проживания.</textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Текст о себе (второй абзац - опыт)</label>
+                        <textarea id="aboutText2" rows="4" class="form-control">Мой педагогический стаж — более 10 лет. За это время я помогла сотням детей и взрослых обрести красивую и чистую речь. В своей работе я использую индивидуальный подход к каждому ученику, сочетая классические логопедические методики с современными игровыми технологиями.</textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Текст о себе (третий абзац)</label>
+                        <textarea id="aboutText3" rows="4" class="form-control">Я регулярно повышаю квалификацию, изучаю новые методики и участвую в профессиональных конференциях. Для меня важно не просто поставить звуки, а сделать процесс обучения увлекательным и комфортным, чтобы каждый мой ученик чувствовал себя уверенно и мог свободно выражать свои мысли.</textarea>
+                    </div>
+                    <button type="submit" class="save-btn"><i class="fas fa-save"></i> Сохранить изменения</button>
+                </form>
+            </div>
+
+            <!-- Секция: Услуги -->
+            <div id="services-section" class="section-content">
+                <h2>Редактирование услуг</h2>
+                <div class="items-list" id="servicesList">
+                    <!-- Услуги будут загружены из localStorage -->
+                </div>
+                <button class="add-btn" id="addServiceBtn"><i class="fas fa-plus"></i> Добавить услугу</button>
+            </div>
+
+            <!-- Секция: Буквы алфавита -->
+            <div id="letters-section" class="section-content">
+                <h2>Редактирование занятий по буквам</h2>
+                <div class="items-list" id="lettersList">
+                    <!-- Буквы будут загружены -->
+                </div>
+                <button class="add-btn" id="addLetterBtn"><i class="fas fa-plus"></i> Добавить занятие с буквой</button>
+            </div>
+
+            <!-- Секция: Видео-занятия -->
+            <div id="video-section" class="section-content">
+                <h2>Редактирование видео-занятий</h2>
+                <div class="items-list" id="videoList">
+                    <!-- Видео будут загружены -->
+                </div>
+                <button class="add-btn" id="addVideoBtn"><i class="fas fa-plus"></i> Добавить видео-занятие</button>
+            </div>
+
+            <!-- Секция: Речевые нарушения -->
+            <div id="disorders-section" class="section-content">
+                <h2>Редактирование речевых нарушений</h2>
+                <div class="items-list" id="disordersList">
+                    <!-- Нарушения будут загружены -->
+                </div>
+                <button class="add-btn" id="addDisorderBtn"><i class="fas fa-plus"></i> Добавить нарушение</button>
+            </div>
+
+            <!-- Секция: Отзывы -->
+            <div id="reviews-section" class="section-content">
+                <h2>Редактирование отзывов</h2>
+                <div class="items-list" id="reviewsList">
+                    <!-- Отзывы будут загружены -->
+                </div>
+                <button class="add-btn" id="addReviewBtn"><i class="fas fa-plus"></i> Добавить отзыв</button>
+            </div>
+
+            <!-- Секция: Контакты -->
+            <div id="contacts-section" class="section-content">
+                <h2>Редактирование контактов</h2>
+                <form id="contactsForm">
+                    <div class="form-group">
+                        <label>WhatsApp номер</label>
+                        <input type="text" id="whatsapp" value="+7 (999) 123-45-67" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>Telegram</label>
+                        <input type="text" id="telegram" value="@logoped_nurimanova" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>VK</label>
+                        <input type="text" id="vk" value="vk.com/logoped_nurimanova" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" id="email" value="logoped@nurimanova.ru" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>Телефон</label>
+                        <input type="text" id="phone" value="+7 (999) 123-45-67" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>Адрес</label>
+                        <input type="text" id="address" value="г. Москва, ул. Логопедическая, 15" class="form-control">
+                    </div>
+                    <button type="submit" class="save-btn"><i class="fas fa-save"></i> Сохранить изменения</button>
+                </form>
+            </div>
+
+            <!-- Секция: Достижения -->
+            <div id="achievements-section" class="section-content">
+                <h2>Редактирование достижений</h2>
+                <div class="items-list" id="achievementsList">
+                    <!-- Достижения будут загружены -->
+                </div>
+                <button class="add-btn" id="addAchievementBtn"><i class="fas fa-plus"></i> Добавить достижение</button>
+            </div>
+        </div>
+    </main>
+</div>
+
+<!-- Модальное окно для добавления/редактирования -->
+<div id="editModal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <h3 id="modalTitle">Добавить</h3>
+        <form id="editForm">
+            <div id="modalFields"></div>
+            <button type="submit" class="save-btn">Сохранить</button>
+        </form>
+    </div>
+</div>
+
+<script src="../js/dashboard.js"></script>
+</body>
+</html>

@@ -44,124 +44,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // ===== ФОРМА ЗАПИСИ =====
-    const appointmentForm = document.getElementById('appointmentForm');
-    if (appointmentForm) {
-        appointmentForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Валидация телефона (простая)
-            const phone = document.getElementById('phone').value;
-            if (!phone.match(/^\+?[0-9\s\-\(\)]{10,20}$/)) {
-                alert('Пожалуйста, введите корректный номер телефона');
-                return;
-            }
-            
-            // Здесь можно отправить данные на сервер
-            alert('Спасибо! Ваша заявка отправлена. Мы свяжемся с вами в ближайшее время.');
-            this.reset();
-        });
-    }
-
-    // ===== МОДАЛЬНОЕ ОКНО ДЛЯ ОТЗЫВОВ =====
-    const modal = document.getElementById('reviewModal');
-    const reviewLink = document.getElementById('reviewLink');
-    const closeBtn = document.querySelector('.close-modal');
-    
-    if (reviewLink && modal) {
-        reviewLink.addEventListener('click', function(e) {
-            e.preventDefault();
-            modal.classList.add('show');
-            document.body.style.overflow = 'hidden'; // запрет прокрутки
-        });
-    }
-    
-    if (closeBtn && modal) {
-        closeBtn.addEventListener('click', function() {
-            modal.classList.remove('show');
-            document.body.style.overflow = ''; // вернуть прокрутку
-        });
-    }
-    
-    // Закрытие по клику вне модалки
-    window.addEventListener('click', function(e) {
-        if (e.target === modal) {
-            modal.classList.remove('show');
-            document.body.style.overflow = '';
-        }
-    });
-
-    // ===== РЕЙТИНГ ЗВЕЗДАМИ =====
-    const stars = document.querySelectorAll('.stars i');
-    const ratingInput = document.getElementById('rating');
-    
-    if (stars.length > 0 && ratingInput) {
-        stars.forEach(star => {
-            star.addEventListener('mouseover', function() {
-                const rating = this.dataset.rating;
-                stars.forEach(s => {
-                    if (s.dataset.rating <= rating) {
-                        s.classList.add('hover');
-                    }
-                });
-            });
-            
-            star.addEventListener('mouseout', function() {
-                stars.forEach(s => s.classList.remove('hover'));
-            });
-            
-            star.addEventListener('click', function() {
-                const rating = this.dataset.rating;
-                ratingInput.value = rating;
-                
-                stars.forEach(s => {
-                    s.classList.remove('selected', 'far', 'fas');
-                    if (s.dataset.rating <= rating) {
-                        s.classList.add('selected', 'fas');
-                        s.classList.remove('far');
-                    } else {
-                        s.classList.add('far');
-                        s.classList.remove('fas', 'selected');
-                    }
-                });
-            });
-        });
-    }
-
-    // ===== ФОРМА ОТЗЫВА =====
-    const reviewForm = document.getElementById('reviewForm');
-    if (reviewForm) {
-        reviewForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Проверка рейтинга
-            const rating = document.getElementById('rating').value;
-            if (!rating) {
-                alert('Пожалуйста, поставьте оценку');
-                return;
-            }
-            
-            // Проверка согласия
-            const consent = document.getElementById('reviewConsent');
-            if (!consent.checked) {
-                alert('Необходимо согласие на обработку персональных данных');
-                return;
-            }
-            
-            alert('Спасибо за ваш отзыв!');
-            modal.classList.remove('show');
-            document.body.style.overflow = '';
-            this.reset();
-            
-            // Сброс звезд
-            stars.forEach(s => {
-                s.classList.remove('selected', 'fas');
-                s.classList.add('far');
-            });
-            ratingInput.value = '';
-        });
-    }
-
     // ===== МАСКА ДЛЯ ТЕЛЕФОНА =====
     const phoneInput = document.getElementById('phone');
     if (phoneInput) {
@@ -180,12 +62,9 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
-});
 
-document.addEventListener('DOMContentLoaded', function() {
-    // ... (предыдущий код остается) ...
-
-    // ===== НОВЫЙ КОД: Обработка согласия с правилами =====
+    // ===== ОБРАБОТКА СОГЛАСИЯ С ПРАВИЛАМИ И ФОРМЫ ЗАПИСИ =====
+    const appointmentForm = document.getElementById('appointmentForm');
     const dataConsent = document.getElementById('dataConsent');
     const submitBtn = document.getElementById('submitBtn');
     const policyLink = document.getElementById('policyLink');
@@ -197,6 +76,8 @@ document.addEventListener('DOMContentLoaded', function() {
     if (dataConsent && submitBtn) {
         // Изначально кнопка неактивна
         submitBtn.disabled = true;
+        submitBtn.style.opacity = '0.5';
+        submitBtn.style.cursor = 'not-allowed';
         
         dataConsent.addEventListener('change', function() {
             submitBtn.disabled = !this.checked;
@@ -220,7 +101,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Закрытие модального окна
+    // Закрытие модального окна (крестик)
     if (policyClose && policyModal) {
         policyClose.addEventListener('click', function() {
             policyModal.classList.remove('show');
@@ -237,7 +118,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // Автоматически отмечаем чекбокс
             if (!dataConsent.checked) {
                 dataConsent.checked = true;
-                // Триггерим событие change
+                // Вызываем событие change, чтобы активировать кнопку
                 const event = new Event('change', { bubbles: true });
                 dataConsent.dispatchEvent(event);
             }
@@ -252,7 +133,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Обновленная отправка формы с проверкой согласия
+    // ===== ПОЛНОЦЕННАЯ ВАЛИДАЦИЯ И ОТПРАВКА ФОРМЫ =====
     if (appointmentForm) {
         appointmentForm.addEventListener('submit', function(e) {
             e.preventDefault();
@@ -263,28 +144,53 @@ document.addEventListener('DOMContentLoaded', function() {
                 return;
             }
             
-            // Валидация телефона
-            const phone = document.getElementById('phone').value;
-            if (!phone.match(/^\+?[0-9\s\-\(\)]{10,20}$/)) {
-                alert('Пожалуйста, введите корректный номер телефона');
+            // Проверка выбора услуги
+            const serviceSelect = document.getElementById('serviceSelect');
+            if (!serviceSelect.value) {
+                alert('Пожалуйста, выберите услугу');
+                serviceSelect.focus();
                 return;
             }
             
-            // Здесь можно отправить данные на сервер
+            // Проверка имени
+            const parentName = document.getElementById('parentName');
+            if (!parentName.value.trim()) {
+                alert('Пожалуйста, введите ваше имя');
+                parentName.focus();
+                return;
+            }
+            
+            // Проверка телефона
+            const phone = document.getElementById('phone').value;
+            const phoneRegex = /^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$/;
+            if (!phoneRegex.test(phone)) {
+                alert('Пожалуйста, введите корректный номер телефона в формате +7 (___) ___-__-__');
+                phoneInput.focus();
+                return;
+            }
+            
+            // Если все проверки пройдены
             alert('Спасибо! Ваша заявка отправлена. Мы свяжемся с вами в ближайшее время.');
+            
+            // Сброс формы
             this.reset();
             
-            // Сбрасываем чекбокс и блокируем кнопку
+            // Сброс чекбокса и блокировка кнопки
             if (dataConsent) {
                 dataConsent.checked = false;
                 submitBtn.disabled = true;
                 submitBtn.style.opacity = '0.5';
+                submitBtn.style.cursor = 'not-allowed';
+            }
+            
+            // Сброс выпадающего списка
+            if (serviceSelect) {
+                serviceSelect.value = '';
             }
         });
     }
 
-    // ===== ДОПОЛНИТЕЛЬНО: Валидация формы перед отправкой =====
-    // Добавляем визуальную индикацию обязательных полей
+    // ===== ВИЗУАЛЬНАЯ ИНДИКАЦИЯ ОБЯЗАТЕЛЬНЫХ ПОЛЕЙ =====
     const requiredFields = document.querySelectorAll('[required]');
     requiredFields.forEach(field => {
         field.addEventListener('invalid', function(e) {
@@ -297,10 +203,17 @@ document.addEventListener('DOMContentLoaded', function() {
             }, { once: true });
         });
     });
-
-    // Стили для полей с ошибкой (добавить в CSS)
-    // input.error, select.error, textarea.error {
-    //     border-color: #e53e3e !important;
-    //     background-color: #fff5f5 !important;
-    // }
+    
+    // Добавляем стили для полей с ошибкой, если их еще нет
+    if (!document.querySelector('#error-styles')) {
+        const style = document.createElement('style');
+        style.id = 'error-styles';
+        style.textContent = `
+            input.error, select.error, textarea.error {
+                border-color: #e53e3e !important;
+                background-color: #fff5f5 !important;
+            }
+        `;
+        document.head.appendChild(style);
+    }
 });

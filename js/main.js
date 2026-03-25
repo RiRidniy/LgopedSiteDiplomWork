@@ -1,4 +1,4 @@
-// Слайдер отзывов
+
 document.addEventListener('DOMContentLoaded', function() {
     const slides = document.querySelectorAll('.slide');
     const dots = document.querySelectorAll('.dot');
@@ -7,7 +7,6 @@ document.addEventListener('DOMContentLoaded', function() {
     let currentIndex = 0;
     let autoSlideInterval;
 
-    // Функция показа слайда по индексу
     function showSlide(index) {
         if (index >= slides.length) currentIndex = 0;
         else if (index < 0) currentIndex = slides.length - 1;
@@ -20,7 +19,6 @@ document.addEventListener('DOMContentLoaded', function() {
         dots[currentIndex].classList.add('active');
     }
 
-    // Переключение по кнопкам
     if (prevBtn && nextBtn) {
         prevBtn.addEventListener('click', () => {
             showSlide(currentIndex - 1);
@@ -33,7 +31,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Переключение по точкам
     dots.forEach((dot, i) => {
         dot.addEventListener('click', () => {
             showSlide(i);
@@ -41,7 +38,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Автоматическое перелистывание
     function startAutoSlide() {
         autoSlideInterval = setInterval(() => {
             showSlide(currentIndex + 1);
@@ -53,7 +49,6 @@ document.addEventListener('DOMContentLoaded', function() {
         startAutoSlide();
     }
 
-    // Запускаем автослайдер
     if (slides.length > 0) {
         showSlide(0);
         startAutoSlide();

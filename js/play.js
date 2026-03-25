@@ -51,7 +51,6 @@ document.addEventListener('DOMContentLoaded', function() {
         card.addEventListener('click', function(e) {
             e.preventDefault();
             const letter = this.dataset.letter;
-            // Здесь можно добавить переход на страницу с заданиями для конкретной буквы
             alert(`Вы выбрали букву "${letter}". Страница с заданиями для этой буквы находится в разработке.`);
         });
     });
